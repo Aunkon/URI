@@ -7,6 +7,15 @@
 using namespace std;
 int main()
 {
-
+    int a,i;
+    while(scanf("%d",&a)!=EOF)
+    {
+        if(a%2==0)  a++;
+        for(i=0;i<6;i++)
+        {
+            printf("%d\n",a);
+            a+=2;
+        }
+    }
     return 0;
 }
