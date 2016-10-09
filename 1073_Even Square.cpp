@@ -7,18 +7,14 @@
 using namespace std;
 int main()
 {
-    int x,y,r;
-    while(scanf("%d %d",&x,&y)!=0)
+    int n,i;
+    while(scanf("%d",&n)!=EOF)
     {
-        r=0;
-        if(x>y)     swap(x,y);
-        if(x%2==0)  x++;
-        if(y%2==0)  y--;
-        for(++x;x<y;x+=2)
+        if(n%2!=0)  n--;
+        for(i=2;i<=n;i+=2)
         {
-            r+=x;
+            printf("%d^2 = %d\n",i,i*i);
         }
-        printf("%d\n",r);
     }
     return 0;
 }

@@ -7,18 +7,17 @@
 using namespace std;
 int main()
 {
-    int x,y,r;
-    while(scanf("%d %d",&x,&y)!=0)
+    int n,x,a,b;
+    while(scanf("%d",&n)!=EOF)
     {
-        r=0;
-        if(x>y)     swap(x,y);
-        if(x%2==0)  x++;
-        if(y%2==0)  y--;
-        for(++x;x<y;x+=2)
+        a=b=0;
+        while(n--)
         {
-            r+=x;
+            scanf("%d",&x);
+            if(x>=10 && x<=20)  a++;
+            else                b++;
         }
-        printf("%d\n",r);
+        printf("%d in\n%d out\n",a,b);
     }
     return 0;
 }
