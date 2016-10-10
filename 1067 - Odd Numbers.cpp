@@ -7,12 +7,13 @@
 using namespace std;
 int main()
 {
-    double i,j=1;
-    for(i=0;i<=2;i+=.2)
+    int i,ni;
+    while(scanf("%d",&ni)!=EOF)
     {
-        cout << "I=" << i << " " << "J=" << j+i << "\n";
-        cout << "I=" << i << " " << "J=" << j+i+1 << "\n";
-        cout << "I=" << i << " " << "J=" << j+i+2 << "\n";
+        for(i=1;i<=ni;i+=2)
+        {
+            printf("%d\n",i);
+        }
     }
     return 0;
 }
