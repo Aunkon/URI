@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
-1476032292 source:g:\important & others\project\c or c++\uri\test\test\main.cpp
-	<bits/stdc++.h>
+1476215102 source:g:\important & others\project\c or c++\uri\test\test\main.cpp
+	<iostream>
+	<stdio.h>
 

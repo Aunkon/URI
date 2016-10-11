@@ -1,24 +1,57 @@
-/****       Md. Walid Bin khalid Aunkon                  ****/
-/****       Daffodil International University            ****/
-/****       ID:     121-15-1669                          ****/
-/****       Email:  mdwalidbinkhalidaunkon@gmail.com     ****/
-/****       Mobile No:  +88-01916-492926                 ****/
-#include<bits/stdc++.h>
+#include <iostream>
+#include <stdio.h>
+
 using namespace std;
+
 int main()
 {
-    int x,y,r;
-    while(scanf("%d %d",&x,&y)!=0)
+
+    float x, y, z, n;
+    y = 0;
+    z = 0;
+    n = 0;
+    while(true)
     {
-        r=0;
-        if(x>y)     swap(x,y);
-        if(x%2==0)  x++;
-        if(y%2==0)  y--;
-        for(++x;x<y;x+=2)
+        cin >> x;
+        if(n == 1)
         {
-            r+=x;
+
+            if(x == 2)
+            {
+                break;
+            }
+            else if(x == 1)
+            {
+                n = 0;
+                continue;
+            }
+            else
+            {
+                cout << "novo calculo (1-sim 2-nao)\n";
+                continue;
+            }
         }
-        printf("%d\n",r);
+        else
+        {
+            if(x < 0 || x > 10)
+            {
+                cout << "nota invalida\n";
+            }
+            else if(z == 0)
+            {
+                y = x;
+                z = 1;
+            }
+            else
+            {
+                printf("media = %.2f\n", (x+y)/2.00);
+                z = 0;
+                n = 1;
+            }
+        }
+
+        if(n == 1) cout << "novo calculo (1-sim 2-nao)\n";
+
     }
     return 0;
 }
