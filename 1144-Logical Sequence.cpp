@@ -7,19 +7,15 @@
 using namespace std;
 int main()
 {
-    int x,y,i,j;
-    while(scanf("%d %d",&x,&y)!=EOF)
+    int n,i,s,q;
+    while(scanf("%d",&n)!=EOF)
     {
-        for(i=1;i<=y;i++)
+        for(i=1;i<=n;i++)
         {
-            for(j=0;j<x;j++)
-            {
-                if(i>y)    break;
-                printf("%d ",i);
-                i++;
-            }
-            printf("\n");
-            i--;
+            s=i*i;
+            q=s*i;
+            printf("%d %d %d\n",i,s++,q++);
+            printf("%d %d %d\n",i,s,q);
         }
     }
     return 0;
