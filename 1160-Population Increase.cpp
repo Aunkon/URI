@@ -7,22 +7,25 @@
 using namespace std;
 int main()
 {
-    int t,n,c,i,d;
+    int pa,pb,t,c;
+    double ga,gb;
     scanf("%d",&t);
     while(t--)
     {
         c=0;
-        scanf("%d",&n);
-        d=1+n/2;
-        for(i=1;i<d;i++)
+        scanf("%d %d %lf %lf",&pa,&pb,&ga,&gb);
+        while(pa<=pb)
         {
-            if(n%i==0)
+            pa+=pa*ga/100;
+            pb+=pb*gb/100;
+            c++;
+            if(c>100)
             {
-                c+=i;
+                break;
             }
         }
-        if(c==n)    printf("%d eh perfeito\n",n);
-        else        printf("%d nao eh perfeito\n",n);
+        if(c>100)   printf("Mais de 1 seculo.\n");
+        else        printf("%d anos.\n",c);
     }
     return 0;
 }

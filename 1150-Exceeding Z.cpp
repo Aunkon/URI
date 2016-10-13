@@ -7,22 +7,18 @@
 using namespace std;
 int main()
 {
-    int t,n,c,i,d;
-    scanf("%d",&t);
-    while(t--)
+    int x,z,s,c;
+    scanf("%d %d",&x,&z);
+    s=c=0;
+    while(z<=x)
     {
-        c=0;
-        scanf("%d",&n);
-        d=1+n/2;
-        for(i=1;i<d;i++)
-        {
-            if(n%i==0)
-            {
-                c+=i;
-            }
-        }
-        if(c==n)    printf("%d eh perfeito\n",n);
-        else        printf("%d nao eh perfeito\n",n);
+        scanf("%d",&z);
     }
+    while(s<z)
+    {
+        c++;
+        s+=x++;
+    }
+    printf("%d\n",c);
     return 0;
 }

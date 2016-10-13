@@ -7,22 +7,19 @@
 using namespace std;
 int main()
 {
-    int t,n,c,i,d;
-    scanf("%d",&t);
-    while(t--)
+    //freopen("input.txt","r",stdin);
+    //freopen("output.txt","w",stdout);
+    int x,i,s;
+    while(scanf("%d",&x)&&x!=0)
     {
-        c=0;
-        scanf("%d",&n);
-        d=1+n/2;
-        for(i=1;i<d;i++)
+        s=0;
+        if(x%2!=0)  x++;
+        for(i=1;i<=5;i++)
         {
-            if(n%i==0)
-            {
-                c+=i;
-            }
+            s+=x;
+            x+=2;
         }
-        if(c==n)    printf("%d eh perfeito\n",n);
-        else        printf("%d nao eh perfeito\n",n);
+        printf("%d\n",s);
     }
     return 0;
 }
